@@ -1,0 +1,188 @@
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%; /* Ensure the body and html elements take up the full height */
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Center the content horizontally */
+    background: #e3f2fd;
+    color: #f3e9e9;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #86dae5, #03a9f4);
+    
+    width: 100%;
+    min-height: 150px; /* Ensure header has enough space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  .header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column; /* Stack the character boxes vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* Ensure the container takes the full width */
+    padding: 0 10px; /* Padding to avoid images sticking to the edges */
+  }
+  
+  .character {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Ensure each character container fills the width */
+    max-width: 100%; /* Allow images to fill the full width */
+    transition: transform 0.2s;
+  }
+  
+  .character:hover {
+    transform: scale(1.05);
+  }
+  
+  .character img {
+    width: 100%; /* Image takes up the full width of its container */
+    height: 300px; /* Set a fixed height to ensure all images are uniform */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+  
+  .character h3, .description {
+    position: absolute;
+    color: white;
+    z-index: 1; /* Ensure text is above the image */
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Moana's Position - Name and description on the left side */
+  .moana-name, .moana-description {
+    left: 90px;
+    position: absolute;
+  }
+  
+  .moana-name {
+    top: 70%;
+    transform: translateY(-50%); /* Vertically center */
+  }
+  
+  .moana-description {
+    top: 80%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  
+  .maui-name, .maui-description {
+    left: 20px;
+    position: absolute;
+    
+  }
+  
+  .maui-name {
+    top: 40%;
+    transform: translateY(-50%); /* Vertically center */
+  }
+  
+  .maui-description {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  
+  /* Te Fiti's Position - Name and description on the left side */
+  body .tefiti-name, .tefiti-description {
+    left: 70px;
+    position: absolute;
+    color: black;
+
+  }
+  
+  .tefiti-name {
+    top: 40%;
+    transform: translateY(-50%); /* Vertically center */
+    
+  }
+  
+  .tefiti-description {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    padding: 10px 0;
+    
+  }
+  
+  /* Tamatoa's Position - Name and description on the right side */
+  .tamatoa-name, .tamatoa-description {
+    right: 50px;
+    position: absolute;
+  }
+  
+  .tamatoa-name {
+    top: 60%;
+    transform: translateY(-50%); /* Vertically center */
+  }
+  
+  .tamatoa-description {
+    top: 70%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  
+  /* Hei Hei's Position - Name and description on the left side */
+  .heihei-name, .heihei-description {
+    left: 120px;
+    position: absolute;
+  }
+  
+  .heihei-name {
+    top: 30%;
+    transform: translateY(-50%); /* Vertically center */
+  }
+  
+  .heihei-description {
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .character {
+      width: 100%; /* Make each character take full width on smaller screens */
+      max-width: 100%; /* Remove max-width restriction on small screens */
+    }
+  
+    .character img {
+      height: 200px; /* Reduce image height further on small screens */
+    }
+  }
+  
